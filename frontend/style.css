@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+button,
+textarea,
+select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+/* END of reset */
+
+#root {
+    color:#171717;
+}
+
+body {
+    font-family: 'Quattrocento Sans', sans-serif;
+    margin: 0;
+    color: white;
+}
+
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: 'Quattrocento', serif;
+    background-color: #fff;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+main {
+    margin: auto;
+    text-align: center;
+}
+
+.title-section {
+    padding: 20px;
+}
+
+#datepicker {
+    box-sizing: border-box;
+    width: 300px;
+    border-radius: 4px;
+    height: 40px;
+	padding: 0 10px;
+	font-size: 16px;
+	background-color: white;
+  	border: solid 1px rgb(38, 38, 38);
+}
+
+form {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+
+input {
+    margin: 0 auto;
+}
+
+input, 
+label {
+	display: block;
+	width: 100%;
+}
+
+a img {
+    height: 60vh;
+}
+
+#videoLink {
+    width: 640px;
+    height: 360px
+}
+
+.explanation-container {
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px white;
+}
+
+#explanation {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    margin: 20px auto;
+}
+
