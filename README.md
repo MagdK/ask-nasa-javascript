@@ -1,1 +1,1 @@
-Astronomy picture of the day by using NASA API. 
+JavaScript project. Astronomy picture of the day using NASA API. 
