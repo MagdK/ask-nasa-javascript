@@ -33,16 +33,19 @@ select {
     border-radius: 0;
 }
 
-/* END of reset */
+/* END OF RESET */
+
+
 
 #root {
     color:#171717;
+    background-color: #fbfbfb;
 }
 
 body {
     font-family: 'Quattrocento Sans', sans-serif;
-    margin: 0;
     color: white;
+    background-color: #fbfbfb;
 }
 
 #root {
@@ -58,7 +61,6 @@ h1 {
     font-size: 32px;
     line-height: 40px;
     font-family: 'Quattrocento', serif;
-    background-color: #fff;
     font-weight: 700;
     text-align: center;
     margin: 20px 0;
@@ -71,12 +73,14 @@ h2 {
 }
 
 main {
-    margin: auto;
-    text-align: center;
+    margin: 0 auto;
 }
 
 .title-section {
-    padding: 20px;
+    max-width: 600px;
+    padding-top: 16px;
+    text-align: left;
+    margin: 0 auto;
 }
 
 #datepicker {
@@ -108,18 +112,26 @@ label {
 }
 
 a img {
-    height: 60vh;
+    max-height: 50vh;
+}
+
+#media-section {
+    text-align: center;
+}
+
+.image-div {
+    width: 60%;
+    margin: 0 auto;
 }
 
 #videoLink {
-    width: 640px;
+    width: 60%;
     height: 360px
 }
 
 .explanation-container {
     width: 80%;
     margin: 0 auto;
-    border: solid 1px white;
 }
 
 #explanation {
@@ -128,4 +140,11 @@ a img {
     line-height: 28px;
     text-align: left;
     margin: 20px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
 }

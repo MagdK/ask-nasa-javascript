@@ -11,7 +11,7 @@
 function pageHeader() {
     return `
         <header>
-            <h1>NASA's Astronomical Picture of the Day</h1>
+            <h1>Astronomical Picture of the Day from NASA</h1>
             <form >
                 <input id="datepicker" type="date"> 
             </form>
@@ -28,16 +28,17 @@ function pageContent(nasa) {
         media = imageSection(nasa)
     }
     return `
+        <section id="media-section">${media}</section>
+    
         <section class="title-section">
             <h2 id="title">${nasa.title}</h2>
             <p id="date">${nasa.date}</p>
         </section>
 
-        <section id="media-section">${media}</section>
-
         <div class="explanation-container">
             <p id="explanation">${nasa.explanation}</p>
         </div>
+        
     `;
 };
 
