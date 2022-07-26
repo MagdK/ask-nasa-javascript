@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
 	
 	`;
     
-	let filePath = path.resolve(__dirname + '/../frontend' + req.url);
+	let filePath = path.resolve(__dirname + '/' + req.url);
     
 	fs.access(filePath, fs.constants.R_OK, (err) => {
 	if(err){
@@ -63,7 +63,7 @@ const server = http.createServer((req, res) => {
 	});
 });
 
-server.listen(9000, "127.0.0.1", () => {
+server.listen(process.env.PORT || 9000, "127.0.0.1", () => {
     const addr = server.address();
 		console.log(`http://${addr.address}:${addr.port}`);
 });

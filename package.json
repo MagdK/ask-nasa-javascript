@@ -1,0 +1,20 @@
+{
+  "name": "ask-nasa-javascript",
+  "version": "1.0.0",
+  "description": "JavaScript project. Astronomy picture of the day using NASA API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagdK/ask-nasa-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagdK/ask-nasa-javascript/issues"
+  },
+  "homepage": "https://github.com/MagdK/ask-nasa-javascript#readme"
+}
