@@ -11,7 +11,7 @@
 function pageHeader() {
     return `
         <header>
-            <h1>Astronomical Picture of the Day from NASA</h1>
+            <h1>Astronomical Picture of the Day</h1>
             <form >
                 <input id="datepicker" type="date"> 
             </form>

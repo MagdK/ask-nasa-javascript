@@ -58,18 +58,20 @@ header {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 48px;
     line-height: 40px;
-    font-family: 'Quattrocento', serif;
-    font-weight: 700;
+    margin: 48px 0;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
     text-align: center;
-    margin: 20px 0;
 }
 
 h2 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
 }
 
 main {
@@ -85,24 +87,24 @@ main {
 
 #datepicker {
     box-sizing: border-box;
-    width: 300px;
+    max-width: 400px;
     border-radius: 4px;
     height: 40px;
 	padding: 0 10px;
 	font-size: 16px;
 	background-color: white;
-  	border: solid 1px rgb(38, 38, 38);
+  	border: solid 1px #262626;
 }
 
 form {
-	width: 100%;
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 0px 20px;
+	margin: 48px auto 16px;
+    width: 100%;
 }
 
 input {
     margin: 0 auto;
+    width: 100%;
+	
 }
 
 input, 
@@ -112,7 +114,7 @@ label {
 }
 
 a img {
-    max-height: 50vh;
+    height: 60vh;
 }
 
 #media-section {
@@ -127,6 +129,14 @@ a img {
 #videoLink {
     width: 60%;
     height: 360px
+}
+
+#date {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+    color: #595959;
 }
 
 .explanation-container {
