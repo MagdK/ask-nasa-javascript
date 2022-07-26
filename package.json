@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MagdK/ask-nasa-javascript/issues"
   },
-  "homepage": "https://github.com/MagdK/ask-nasa-javascript#readme"
+  "homepage": "https://github.com/MagdK/ask-nasa-javascript#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
