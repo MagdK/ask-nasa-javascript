@@ -44,11 +44,9 @@ function pageContent(nasa) {
 
 const imageSection = (nasa) => {
     return`
-    <a id="hdimg" href="" target="-blank">
         <div class="image-div">
-        <img id="image_of_the_day" src="${nasa.hdurl}" alt="image-by-nasa"/>
+            <img id="image_of_the_day" src="${nasa.hdurl}" alt="image-by-nasa"/>
         </div>
-    </a>
     `;
 };
 
