@@ -111,8 +111,9 @@ label {
 
 a img {
     object-fit: contain;
+    text-align: center;
     width: 100%;
-    height: 60vh;
+    max-height: 60vh;
 }
 
 #media-section {
@@ -122,12 +123,14 @@ a img {
 
 .image-div {
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #videoLink {
-    width: 60%;
-    height: 360px
+    object-fit: contain;
+    text-align: center;
+    width: 100%;
+    height: 60vh;
 }
 
 #date {
@@ -165,11 +168,7 @@ a img {
         margin: 1.5rem auto 0;
     }
 
-    a img {
-        object-fit: contain;
-        width: 100%;
-        height: 60vh;
-    }
+    
     
     #media-section {
         text-align: center;
@@ -179,6 +178,13 @@ a img {
         margin: 0 auto;
         width: 100%;
         object-fit: cover;
+    }
+
+    a img {
+        object-fit: contain;
+        text-align: center;
+        width: 100%;
+        max-height: 60vh;
     }
     
     #videoLink {
