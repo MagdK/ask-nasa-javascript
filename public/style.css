@@ -40,6 +40,8 @@ select {
 #root {
     color:#171717;
     background-color: #fbfbfb;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 body {
@@ -48,19 +50,14 @@ body {
     background-color: #fbfbfb;
 }
 
-#root {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 header {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
 }
 
 h1 {
     font-size: 48px;
-    line-height: 40px;
-    margin: 48px 0;
+    line-height: 48px;
+    margin: 48px 0 0;
     font-family: 'Teko', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -97,14 +94,13 @@ main {
 }
 
 form {
-	margin: 48px auto 16px;
+	margin: 48px auto 0;
     width: 100%;
 }
 
 input {
     margin: 0 auto;
     width: 100%;
-	
 }
 
 input, 
@@ -132,9 +128,10 @@ a img {
 }
 
 #date {
-    font-size: 16px;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     color: #595959;
 }
@@ -152,9 +149,28 @@ a img {
     margin: 20px auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
     h1 {
-        font-size: 28px;
+        font-size: 36px;
         line-height: 40px;
+    }
+
+    a img {
+        height: 60vh;
+        object-fit: cover;
+    }
+    
+    #media-section {
+        text-align: center;
+    }
+    
+    .image-div {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #videoLink {
+        width: 60%;
+        height: 360px
     }
 }
