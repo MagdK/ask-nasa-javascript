@@ -41,14 +41,12 @@ select {
 
 #root {
     color:#171717;
-    background-color: #fbfbfb;
     max-width: 75rem;
     margin: 0 auto;
 }
 
 body {
     font-family: 'Quattrocento Sans', sans-serif;
-    color: white;
     background-color: #fbfbfb;
 }
 
@@ -71,17 +69,6 @@ h2 {
     font-weight: 400;
     text-align: center;
     font-family: 'Teko', sans-serif;
-}
-
-main {
-    margin: 0 auto;
-}
-
-.title-section {
-    max-width: 38rem;
-    padding-top: 1rem;
-    text-align: left;
-    margin: 0 auto;
 }
 
 #datepicker {
@@ -134,6 +121,13 @@ img {
     text-align: center;
     width: 100%;
     max-height: 60vh;
+}
+
+.description-section {
+    max-width: 38rem;
+    padding-top: 1rem;
+    text-align: left;
+    margin: 0 auto;
 }
 
 #date {

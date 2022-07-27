@@ -6,7 +6,8 @@
 // 3A - log in console data from nasa
 // 3B - show the data in window
 
-// Step 4 - When the page loads, automatically display the current day picture
+// Step 4 - When the page loads, automatically display the picture of the day
+
 
 function pageHeader() {
     return `
@@ -30,15 +31,11 @@ function pageContent(nasa) {
     return `
         <section id="media-section">${media}</section>
     
-        <section class="title-section">
+        <section class="description-section">
             <h2 id="title">${nasa.title}</h2>
             <p id="date">${nasa.date}</p>
-        </section>
-
-        <div class="explanation-container">
             <p id="explanation">${nasa.explanation}</p>
-        </div>
-        
+        </section>
     `;
 };
 
@@ -68,14 +65,14 @@ async function fetchJson(requestedDate) {
     const apodJson = await apod.json();
 
     return apodJson;
-}
+};
 
 // Datepicker
 function updateContent(event) {
     const requestDate = event.target.value
     console.log(event.target.value);
     replaceContent(requestDate);
-}
+};
 
 async function replaceContent(requestDate) {
     const apodJSON = await fetchJson(requestDate);
@@ -83,7 +80,7 @@ async function replaceContent(requestDate) {
 
     const mainSection = document.querySelector("main");
     mainSection.innerHTML = pageContent(apodJSON);
-}
+};
 
 async function loadEvent() {
     // Root div -inserts the page header
@@ -99,6 +96,6 @@ async function loadEvent() {
     datePicker.value = date;
     console.log(date);
     replaceContent(date);
+};
 
-}
 window.addEventListener("load", loadEvent);
