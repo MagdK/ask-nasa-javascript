@@ -13,8 +13,11 @@ function pageHeader() {
     return `
         <header>
             <h1>Astronomical Picture of the Day</h1>
-            <form >
-                <input id="datepicker" type="date"> 
+            <form>
+                <input 
+                    id="datepicker" 
+                    type="date"
+                > 
             </form>
         </header>
         <main></main>
