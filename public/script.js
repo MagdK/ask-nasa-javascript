@@ -19,6 +19,10 @@ function pageHeader() {
                     type="date"
                 > 
             </form>
+            <div class="day_steppet">
+                <div class="day_stepper_previous">Previous</div>
+                <div class="day_stepper_next">Next</div>
+            </div>
         </header>
         <main></main>
     `;
