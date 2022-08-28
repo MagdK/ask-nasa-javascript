@@ -13,14 +13,14 @@ function pageHeader() {
     return `
         <header>
             <h1>Astronomical Picture of the Day</h1>
-            <form>
-                <input 
-                    id="datepicker" 
-                    type="date"
-                > 
-            </form>
-            <div class="day_stepper">
+            <div class="date_navigation_box">
                 <button class="decrement">Previous day</button>
+                <form>
+                    <input 
+                        id="datepicker" 
+                        type="date"
+                    > 
+                </form>
                 <button class="increment">Next day</button>
             </div>
         </header>

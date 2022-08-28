@@ -85,8 +85,7 @@ h2 {
 }
 
 form {
-	margin: 2rem auto 0;
-    width: 100%;
+    width: 315px;
 }
 
 input {
@@ -158,14 +157,26 @@ img {
     margin: 1.5rem auto;
 }
 
-.day_stepper {
+.date_navigation_box {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
-.day_stepper button {
-    padding: 16px;
+.increment,
+.decrement {
+    height: 40px;
+    background-color: white;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    width: 120px;
+}
+
+.increment, 
+.decrement,
+form {
+    margin: 2rem 4px;
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 36rem) {
