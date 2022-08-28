@@ -163,17 +163,15 @@ img {
     align-items: center;
 }
 
-.increment,
-.decrement {
+.button {
     height: 40px;
     background-color: white;
     border: 1px solid #262626;
     border-radius: 4px;
-    width: 120px;
+    width: 80px;
 }
 
-.increment, 
-.decrement,
+.button,
 form {
     margin: 2rem 4px;
     font-size: 1rem;

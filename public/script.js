@@ -14,14 +14,15 @@ function pageHeader() {
         <header>
             <h1>Astronomical Picture of the Day</h1>
             <div class="date_navigation_box">
-                <button class="decrement">Previous day</button>
                 <form>
                     <input 
-                        id="datepicker" 
-                        type="date"
+                    id="datepicker" 
+                    type="date"
                     > 
                 </form>
-                <button class="increment">Next day</button>
+                <button class="decrement button">Previous</button>
+                <button class="increment button">Next</button>
+                <button class="random button">Random</button>
             </div>
         </header>
         <main></main>
@@ -96,20 +97,12 @@ async function replaceContent(requestDate) {
 };
 
 
-
-// function renderPreviousDay() {
+// function renderNextDay() {
 //     const datePicker = document.getElementById("datepicker");
-//     // datePicker.value = "";
+    
 
 //     datePicker.dispatchEvent(new Event('change'));
 // }
-
-function renderNextDay() {
-    const datePicker = document.getElementById("datepicker");
-    
-
-    datePicker.dispatchEvent(new Event('change'));
-}
 
 
 // ON PAGE LOAD
@@ -143,11 +136,11 @@ async function loadEvent() {
         let dateInMilliseconds = Date.parse(datePicker.value); // convert string to number
 
         let minusOneDayInMillisec = dateInMilliseconds - oneDayInMillisec;
-        let yesterday = new Date(minusOneDayInMillisec); // create Date object
-        let yesterdayAsString = yesterday.toISOString().split('T')[0];
+        let previousDay = new Date(minusOneDayInMillisec); // create Date object
+        let previousDayAsString = previousDay.toISOString().split('T')[0];
 
-        replaceContent(yesterdayAsString);
-        datePicker.value = yesterdayAsString;
+        replaceContent(previousDayAsString);
+        datePicker.value = previousDayAsString;
         updateContent;
     });
 
@@ -159,6 +152,7 @@ async function loadEvent() {
 
         // Date in milliseconds sinc 1-Jan-1970 midnight time
         let dateInMilliseconds = Date.parse(datePicker.value); // convert string to number
+        console.log("date in ms", dateInMilliseconds)
 
         let plusOneDayInMillisec = dateInMilliseconds + oneDayInMillisec;
         let nextDay = new Date(plusOneDayInMillisec); // create Date object
@@ -166,6 +160,27 @@ async function loadEvent() {
 
         replaceContent(nextDayAsString);
         datePicker.value = nextDayAsString;
+        updateContent;
+    });
+
+    //  Random day
+    let randomDayButton = document.querySelector('.random');
+    randomDayButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        let earliestEntry = 803321220000;
+        
+        let todayInMillisec = Date.parse(today); // convert string to number
+        console.log("earliestEntry", earliestEntry);
+        console.log("date today in ms", todayInMillisec);
+        
+        let randomInt = Math.floor(Math.random() * (todayInMillisec - earliestEntry + 1) + earliestEntry);
+        
+        let randomDay = new Date(randomInt); // create Date object
+        let randomDayAsString = randomDay.toISOString().split('T')[0]; 
+
+        replaceContent(randomDayAsString);
+        datePicker.value = randomDayAsString;
         updateContent;
     });
     
