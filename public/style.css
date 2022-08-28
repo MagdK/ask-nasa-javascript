@@ -158,6 +158,16 @@ img {
     margin: 1.5rem auto;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer button {
+    padding: 16px;
+}
+
 @media only screen and (max-width: 36rem) {
     header {
         padding: 1.5rem 1.5rem 2rem;

@@ -19,12 +19,15 @@ function pageHeader() {
                     type="date"
                 > 
             </form>
-            <div class="day_steppet">
-                <div class="day_stepper_previous">Previous</div>
-                <div class="day_stepper_next">Next</div>
-            </div>
+            
         </header>
         <main></main>
+        <footer>
+            <div class="day_steppet">
+                <button class="decrement">Previous</button>
+                <button class="increment">Next</button>
+            </div>
+        </footer>
     `;
 };
 
@@ -76,19 +79,38 @@ async function fetchJson(requestedDate) {
 
 // Datepicker
 function updateContent(event) {
-    const requestDate = event.target.value
+    const requestDate = event.target.value;
     console.log(event.target.value);
     replaceContent(requestDate);
 };
 
+// Place content in main tag after fetching it
 async function replaceContent(requestDate) {
     const apodJSON = await fetchJson(requestDate);
-    console.log(apodJSON);
+    console.log("fetched data", apodJSON);
 
     const mainSection = document.querySelector("main");
     mainSection.innerHTML = pageContent(apodJSON);
 };
 
+
+
+// function renderPreviousDay() {
+//     const datePicker = document.getElementById("datepicker");
+//     // datePicker.value = "";
+
+//     datePicker.dispatchEvent(new Event('change'));
+// }
+
+function renderNextDay() {
+    const datePicker = document.getElementById("datepicker");
+    
+
+    datePicker.dispatchEvent(new Event('change'));
+}
+
+
+// ON PAGE LOAD
 async function loadEvent() {
     // Root div -inserts the page header
     const rootElement = document.getElementById("root");
@@ -96,12 +118,55 @@ async function loadEvent() {
 
     const datePicker = document.getElementById("datepicker");
     datePicker.addEventListener("change", updateContent);
+    console.log(typeof datePicker.value); //string
 
     let today = new Date();
-    let date = today.toISOString().split('T')[0]
+    console.log("today", today)
+
+    let date = today.toISOString().split('T')[0];
+    console.log("date", date)
 
     datePicker.value = date;
-    console.log(date);
+    
+
+    let oneDayInMillisec = 86400000;
+
+    //  Previous day
+    let prevDayButton = document.querySelector('.decrement');
+
+    prevDayButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Date in milliseconds sinc 1-Jan-1970 midnight time
+        let dateInMilliseconds = Date.parse(datePicker.value); // convert string to number
+
+        let minusOneDayInMillisec = dateInMilliseconds - oneDayInMillisec;
+        let yesterday = new Date(minusOneDayInMillisec); // create Date object
+        let yesterdayAsString = yesterday.toISOString().split('T')[0];
+
+        replaceContent(yesterdayAsString);
+        datePicker.value = yesterdayAsString;
+        updateContent;
+    });
+
+    //  Next day
+    let nextDayButton = document.querySelector('.increment');
+
+    nextDayButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        // Date in milliseconds sinc 1-Jan-1970 midnight time
+        let dateInMilliseconds = Date.parse(datePicker.value); // convert string to number
+
+        let plusOneDayInMillisec = dateInMilliseconds + oneDayInMillisec;
+        let nextDay = new Date(plusOneDayInMillisec); // create Date object
+        let nextDayAsString = nextDay.toISOString().split('T')[0];
+
+        replaceContent(nextDayAsString);
+        datePicker.value = nextDayAsString;
+        updateContent;
+    });
+    
     replaceContent(date);
 };
 
