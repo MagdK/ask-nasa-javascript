@@ -19,15 +19,12 @@ function pageHeader() {
                     type="date"
                 > 
             </form>
-            
+            <div class="day_stepper">
+                <button class="decrement">Previous day</button>
+                <button class="increment">Next day</button>
+            </div>
         </header>
         <main></main>
-        <footer>
-            <div class="day_steppet">
-                <button class="decrement">Previous</button>
-                <button class="increment">Next</button>
-            </div>
-        </footer>
     `;
 };
 
@@ -66,12 +63,17 @@ const videoSection = (nasa) => {
     `;
 };
 
+function handleError(err) {
+    console.log('Ohhhh nooo');
+    console.log(err);
+}
+
 async function fetchJson(requestedDate) {
     // API key
     const nasaApiKey = "1mTCOFLk0Nof1ZPgSEShro6KaAHddyvNnq8rIoLT";
 
     // Fetch
-    const apod = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${nasaApiKey}&date=${requestedDate}`);
+    const apod = await (fetch(`https://api.nasa.gov/planetary/apod?api_key=${nasaApiKey}&date=${requestedDate}`).catch(handleError));
     const apodJson = await apod.json();
 
     return apodJson;

@@ -158,13 +158,13 @@ img {
     margin: 1.5rem auto;
 }
 
-footer {
+.day_stepper {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-footer button {
+.day_stepper button {
     padding: 16px;
 }
 
