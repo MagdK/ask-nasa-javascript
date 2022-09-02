@@ -20,9 +20,11 @@ function pageHeader() {
                     type="date"
                     > 
                 </form>
-                <button class="decrement button">Previous</button>
-                <button class="increment button">Next</button>
-                <button class="random button">Random</button>
+                <div class="date_buttons_box">
+                    <button class="decrement button">Previous</button>
+                    <button class="increment button">Next</button>
+                    <button class="random button">Random</button>
+                </div>
             </div>
         </header>
         <main></main>
