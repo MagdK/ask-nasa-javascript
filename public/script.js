@@ -3,8 +3,8 @@
 // Step 2 - when date picked, log date
 
 // Step 3 - when date has been picked, show picture of the day
-// 3A - log in console data from nasa
-// 3B - show the data in window
+    // 3A - log in console data from nasa
+    // 3B - show the data in window
 
 // Step 4 - When the page loads, automatically display the picture of the day
 
@@ -99,14 +99,6 @@ async function replaceContent(requestDate) {
 };
 
 
-// function renderNextDay() {
-//     const datePicker = document.getElementById("datepicker");
-    
-
-//     datePicker.dispatchEvent(new Event('change'));
-// }
-
-
 // ON PAGE LOAD
 async function loadEvent() {
     // Root div -inserts the page header
@@ -134,7 +126,7 @@ async function loadEvent() {
     prevDayButton.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Date in milliseconds sinc 1-Jan-1970 midnight time
+        // Date in milliseconds since 1-Jan-1970 midnight time
         let dateInMilliseconds = Date.parse(datePicker.value); // convert string to number
 
         let minusOneDayInMillisec = dateInMilliseconds - oneDayInMillisec;
@@ -152,7 +144,7 @@ async function loadEvent() {
     nextDayButton.addEventListener('click', (event) => {
         event.preventDefault();
 
-        // Date in milliseconds sinc 1-Jan-1970 midnight time
+        // Date in milliseconds since 1-Jan-1970 midnight time
         let dateInMilliseconds = Date.parse(datePicker.value); // convert string to number
         console.log("date in ms", dateInMilliseconds)
 
