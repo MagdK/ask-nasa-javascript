@@ -113,6 +113,7 @@ async function loadEvent() {
     console.log("today", today)
 
     let date = today.toISOString().split('T')[0];
+    datePicker.max = new Date().toISOString().split("T")[0];
     console.log("date", date)
 
     datePicker.value = date;
