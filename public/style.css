@@ -186,7 +186,9 @@ img {
 }
 
 .button:hover {
-    background-color: bisque;
+    background-color: #262626;
+    color: white;
+    border: 1px solid white;
 }
 
 .button,
